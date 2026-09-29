@@ -1,8 +1,171 @@
 <!DOCTYPE html>
-<html>
+<html lang="cs">
 <head>
-<title>Ceník</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ceník - Zubní ordinace</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        h2 {
+            color: #3498db;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+    </style>
 </head>
-<body style="background-color:powderblue;">
-  <h1>Ordinace Rovné Zuby</h1>
-  <table></table>
+<body>
+    <div class="container">
+        <h1>Ceník služeb - Zubní ordinace</h1>
+
+        <h2>Péče o dospělé</h2>
+        <table>
+            <tr>
+                <th>Služba</th>
+                <th>Popis</th>
+                <th>Cena (Kč)</th>
+            </tr>
+            <tr>
+                <td>Vyšetření a diagnostika</td>
+                <td>Komplexní vyšetření ústní dutiny, rentgen, plán léčby</td>
+                <td>500</td>
+            </tr>
+            <tr>
+                <td>Profesionální čištění zubů</td>
+                <td>Odstranění zubního kamene a povlaku, leštění</td>
+                <td>800 - 1 500</td>
+            </tr>
+            <tr>
+                <td>Výplň zubů (amalgám)</td>
+                <td>Standardní výplň malého rozsahu</td>
+                <td>500 - 1 000</td>
+            </tr>
+            <tr>
+                <td>Výplň zubů (kompozit)</td>
+                <td>Estetická výplň malého rozsahu</td>
+                <td>800 - 2 000</td>
+            </tr>
+            <tr>
+                <td>Ošetření kořenového kanálku</td>
+                <td>Jednoduchý případ (1 kanálek)</td>
+                <td>1 500 - 3 000</td>
+            </tr>
+            <tr>
+                <td>Extrakce zubu</td>
+                <td>Odstranění zubu v jednoduchém případě</td>
+                <td>500 - 1 500</td>
+            </tr>
+            <tr>
+                <td>Bělení zubů</td>
+                <td>Bělení v ordinaci</td>
+                <td>3 000 - 6 000</td>
+            </tr>
+        </table>
+
+        <h2>Péče o děti</h2>
+        <table>
+            <tr>
+                <th>Služba</th>
+                <th>Popis</th>
+                <th>Cena (Kč)</th>
+            </tr>
+            <tr>
+                <td>První vyšetření dítěte</td>
+                <td>Komplexní vyšetření pro děti do 6 let</td>
+                <td>300</td>
+            </tr>
+            <tr>
+                <td>Výplň mléčného zubu</td>
+                <td>Standardní výplň</td>
+                <td>400 - 800</td>
+            </tr>
+            <tr>
+                <td>Fluoridace</td>
+                <td>Aplikace fluoridu pro posílení zubů</td>
+                <td>200 - 400</td>
+            </tr>
+        </table>
+
+        <h2>Ortodoncie</h2>
+        <table>
+            <tr>
+                <th>Služba</th>
+                <th>Popis</th>
+                <th>Cena (Kč)</th>
+            </tr>
+            <tr>
+                <td>Konzultace s ortodontistou</td>
+                <td>Vstupní vyšetření a plán léčby</td>
+                <td>500</td>
+            </tr>
+            <tr>
+                <td>Zubní rovnátka (měsíční splátky)</td>
+                <td>Cena se liší podle typu rovnátek</td>
+                <td>2 000 - 5 000</td>
+            </tr>
+        </table>
+
+        <h2>Jiné služby</h2>
+        <table>
+            <tr>
+                <th>Služba</th>
+                <td>Cena (Kč)</td>
+            </tr>
+            <tr>
+                <td>Návštěva v domácím prostředí (přirážka)</td>
+                <td>500</td>
+            </tr>
+            <tr>
+                <td>Nouzová služba (mimo ordinační hodiny)</td>
+                <td>1 500 - 3 000</td>
+            </tr>
+        </table>
+
+        <div class="footer">
+            <p>Ceny jsou uvedeny v českých korunách (Kč) a mohou být změněny bez předchozího upozornění.</p>
+            <p>Pro aktuální ceník a rezervaci termínu nás kontaktujte.</p>
+            <p>Telefon: +420 123 456 789 | Email: info@zubni-ordinace.cz</p>
+        </div>
+    </div>
+</body>
+</html>
