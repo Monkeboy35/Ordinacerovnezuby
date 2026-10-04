@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="cs">
 <head>
- <style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie - Ordinace Rovné Zuby</title>
+    <style>
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
@@ -33,7 +36,7 @@
             text-decoration: underline;
         }
         main {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 2rem auto;
             padding: 0 1rem;
         }
@@ -44,11 +47,8 @@
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        h1 {
-            color: #ffffff;
-        }
-        h2 {
-            color: #2c3e50
+        h1, h2 {
+            color: #2c3e50;
         }
         footer {
             text-align: center;
@@ -57,10 +57,123 @@
             color: white;
             margin-top: 2rem;
         }
-        .highlight {
-            color: #3498db;
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        .gallery img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 35px;
             font-weight: bold;
+            cursor: pointer;
+        }
+        .caption {
+            text-align: center;
+            margin-top: 1rem;
+            font-style: italic;
+            color: #666;
         }
     </style>
 </head>
-  <h1>Ordinace Rovné Zuby</h1>
+<body>
+    <header>
+        <h1>Ordinace Rovné Zuby</h1>
+        <p>Kvalitní zubní péče v Praze 9</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Domů</a></li>
+                <li><a href="index.html#o-nas">O nás</a></li>
+                <li><a href="index.html#sluzby">Služby</a></li>
+                <li><a href="ceník.html">Ceník</a></li>
+                <li><a href="index.html#kontakty">Kontakty</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Galerie Ordinace Rovné Zuby</h1>
+            <p>Prohlédněte si naše práce, prostředí ordinace a spokojené pacienty.</p>
+
+            <div class="gallery" id="gallery">
+                <!-- Sem vložte své obrázky ve formátu:
+                     <img src="cesta-k-obrazku.jpg" alt="Popis obrázku" onclick="openModal(this)">
+                -->
+                <!-- Příklad:
+                <img src="images/ordinace-1.jpg" alt="Čekárna" onclick="openModal(this)">
+                <img src="images/ordinace-2.jpg" alt="Ordinace" onclick="openModal(this)">
+                -->
+            </div>
+
+            <div class="caption">
+                <p>Kliknutím na obrázek jej zobrazíte ve větším rozlišení.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal pro zobrazení většího obrázku -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modal-img" src="" alt="">
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Ordinace Rovné Zuby. Všechna práva vyhrazena.</p>
+    </footer>
+
+    <script>
+        // Funkce pro otevření modalu s větším obrázkem
+        function openModal(img) {
+            const modal = document.getElementById('modal');
+            const modalImg = document.getElementById('modal-img');
+            modal.style.display = "flex";
+            modalImg.src = img.src;
+        }
+
+        // Funkce pro zavření modalu
+        function closeModal() {
+            document.getElementById('modal').style.display = "none";
+        }
+
+        // Zavření modalu při kliknutí mimo obrázek
+        document.getElementById('modal').onclick = function(event) {
+            if (event.target === this) {
+                closeModal();
+            }
+        };
+    </script>
+</body>
+</html>
