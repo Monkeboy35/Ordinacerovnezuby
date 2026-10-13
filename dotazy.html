@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <!-- ① Titulek v záložce prohlížeče. Napiš název své smyšlené firmy. -->
+  <title>NÁZEV FIRMY</title>
+</head>
+<body>
+
+  <!-- ⑥ Navigace: odkazy na všechny stránky webu. Musí být na KAŽDÉ stránce.
+       Názvy souborů v href musí přesně odpovídat souborům v repozitáři. -->
+  <nav>
+    <a href="index.html">Úvod</a> |
+    <a href="cenik.html">Ceník</a>
+  </nav>
+
+  <!-- ① Hlavní nadpis: název firmy. Jeden <h1> na stránku. -->
+  <h1>NÁZEV FIRMY</h1>
+
+  <!-- ② O nás: tři až pět vět vlastními slovy. Co firma dělá, pro koho,
+       co je na ní dobrého. Smyšlené, ale uvěřitelné. -->
+  <h2>O nás</h2>
+  <p>
+    SEM NAPIŠ PRVNÍ VĚTU. A DRUHOU. A TŘETÍ.
+  </p>
+
+  <!-- ③ Ceník: tabulka s hlavičkou a aspoň pěti řádky.
+       <tr> = řádek, <th> = buňka hlavičky, <td> = obyčejná buňka.
+       Další řádek přidáš tak, že zkopíruješ celý <tr>…</tr>.
+       (Na vícestránkovém webu může být tabulka na cenik.html — pak ji odsud smaž.) -->
+  <h2>Ceník</h2>
+  <table>
+    <tr>
+      <th>Služba</th>
+      <th>Cena</th>
+      <th>Poznámka</th>
+    </tr>
+    <tr>
+      <td>SLUŽBA 1</td>
+      <td>000 Kč</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>SLUŽBA 2</td>
+      <td>000 Kč</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>SLUŽBA 3</td>
+      <td>000 Kč</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>SLUŽBA 4</td>
+      <td>000 Kč</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>SLUŽBA 5</td>
+      <td>000 Kč</td>
+      <td></td>
+    </tr>
+  </table>
+
+  <!-- ④ Galerie: aspoň tři obrázky. Soubory dej do složky obrazky/,
+       názvy krátké, bez diakritiky a mezer (ordinace.jpg, ne Ordinace 1.JPG).
+       alt = co je na obrázku (pro nevidomé a pro případ, že se nenačte).
+       figcaption = popisek pod obrázkem. -->
+  <h2>Galerie</h2>
+  <figure>
+    <img src="obrazky/OBRAZEK1.jpg" alt="CO JE NA OBRÁZKU" width="400">
+    <figcaption>POPISEK</figcaption>
+  </figure>
+  <figure>
+    <img src="obrazky/OBRAZEK2.jpg" alt="CO JE NA OBRÁZKU" width="400">
+    <figcaption>POPISEK</figcaption>
+  </figure>
+  <figure>
+    <img src="obrazky/OBRAZEK3.jpg" alt="CO JE NA OBRÁZKU" width="400">
+    <figcaption>POPISEK</figcaption>
+  </figure>
+
+  <!-- ⑤ Kontakt: adresa, telefon, e-mail jako odkaz, otevírací doba jako seznam.
+       VŠECHNO SMYŠLENÉ. Žádné skutečné telefonní číslo. -->
+  <h2>Kontakt</h2>
+  <p>
+    ULICE A ČÍSLO, MĚSTO<br>
+    Telefon: <a href="tel:+420700000000">700 000 000</a><br>
+    E-mail: <a href="mailto:info@priklad.cz">info@priklad.cz</a>
+  </p>
+  <h3>Otevírací doba</h3>
+  <ul>
+    <li>Pondělí–pátek: 0:00–0:00</li>
+    <li>Sobota: 0:00–0:00</li>
+    <li>Neděle: zavřeno</li>
+  </ul>
+
+  <!-- ⑦ Patička: rok a autor webu (tvůj kód žáka nebo křestní jméno). -->
+  <footer>
+    <p>© 2026 · web vytvořil KÓD ŽÁKA</p>
+  </footer>
+
+  <!-- Až budeš hotový: smaž tyhle komentáře, ulož jako index.html,
+       zkopíruj soubor pro druhou stránku (cenik.html) a uprav v ní obsah.
+       Pak validator.w3.org. -->
+</body>
+</html>
